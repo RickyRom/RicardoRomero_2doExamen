@@ -117,12 +117,25 @@ public class NASA extends javax.swing.JFrame {
         tf_peso1 = new javax.swing.JTextField();
         modifica_astronautas = new javax.swing.JButton();
         cb_modificar_astronautas = new javax.swing.JComboBox<>();
+        Agregar_Naves = new javax.swing.JDialog();
+        jPanel11 = new javax.swing.JPanel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        tf_numserie = new javax.swing.JTextField();
+        tf_destino = new javax.swing.JTextField();
+        tf_velocidad = new javax.swing.JTextField();
+        jLabel37 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         agregar_planetas = new javax.swing.JMenuItem();
         agregar_astronautas = new javax.swing.JMenuItem();
+        agregar_naves_espaciales = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         jPanel3.setBackground(new java.awt.Color(51, 51, 51));
@@ -801,6 +814,89 @@ public class NASA extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
 
+        jPanel11.setBackground(new java.awt.Color(51, 51, 51));
+
+        jLabel32.setIcon(new javax.swing.ImageIcon("C:\\Users\\ricky\\OneDrive\\Imágenes\\pirate.galaxy.ravendynamics.rdx-04.onyx_.marble.png")); // NOI18N
+
+        jLabel33.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel33.setText("Naves Espaciales");
+
+        jLabel34.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel34.setText("Numero de Serie");
+
+        jLabel35.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel35.setText("Destino(Solo planetas Creados)");
+
+        jLabel36.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel36.setText("Velocidad");
+
+        jLabel37.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel37.setText("Tipo de Nave");
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sonda Espacial", "Nave Tripulada" }));
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                .addContainerGap(169, Short.MAX_VALUE)
+                .addComponent(jLabel33)
+                .addGap(156, 156, 156))
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel32)
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel35)
+                            .addComponent(jLabel34)
+                            .addComponent(jLabel36)
+                            .addComponent(jLabel37))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tf_numserie)
+                            .addComponent(tf_destino)
+                            .addComponent(tf_velocidad)
+                            .addComponent(jComboBox1, 0, 164, Short.MAX_VALUE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel33)
+                .addGap(43, 43, 43)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel34)
+                    .addComponent(tf_numserie, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel35)
+                    .addComponent(tf_destino, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel36)
+                    .addComponent(tf_velocidad, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel37)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        javax.swing.GroupLayout Agregar_NavesLayout = new javax.swing.GroupLayout(Agregar_Naves.getContentPane());
+        Agregar_Naves.getContentPane().setLayout(Agregar_NavesLayout);
+        Agregar_NavesLayout.setHorizontalGroup(
+            Agregar_NavesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        Agregar_NavesLayout.setVerticalGroup(
+            Agregar_NavesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
@@ -835,6 +931,14 @@ public class NASA extends javax.swing.JFrame {
             }
         });
         jMenu1.add(agregar_astronautas);
+
+        agregar_naves_espaciales.setText("Agregar Naves Espaciales");
+        agregar_naves_espaciales.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                agregar_naves_espacialesActionPerformed(evt);
+            }
+        });
+        jMenu1.add(agregar_naves_espaciales);
 
         jMenuBar1.add(jMenu1);
 
@@ -1103,6 +1207,10 @@ public class NASA extends javax.swing.JFrame {
         
     }//GEN-LAST:event_modifica_astronautasMouseClicked
 
+    private void agregar_naves_espacialesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agregar_naves_espacialesActionPerformed
+        
+    }//GEN-LAST:event_agregar_naves_espacialesActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1140,6 +1248,7 @@ public class NASA extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDialog Agregar_Astronautas;
+    private javax.swing.JDialog Agregar_Naves;
     private javax.swing.JDialog Agregar_Planetas;
     private javax.swing.JMenuItem Eliminar_Planetas;
     private javax.swing.JMenuItem Eliminar_astronautas;
@@ -1150,11 +1259,13 @@ public class NASA extends javax.swing.JFrame {
     private javax.swing.JButton agrega_astronautas;
     private javax.swing.JButton agrega_planetas;
     private javax.swing.JMenuItem agregar_astronautas;
+    private javax.swing.JMenuItem agregar_naves_espaciales;
     private javax.swing.JMenuItem agregar_planetas;
     private javax.swing.JComboBox<String> cb_astronautas;
     private javax.swing.JComboBox<String> cb_modificar_astronautas;
     private javax.swing.JComboBox<String> cb_modificar_planetas;
     private javax.swing.JComboBox<String> cb_planetas;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1180,6 +1291,12 @@ public class NASA extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1191,6 +1308,7 @@ public class NASA extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -1211,6 +1329,7 @@ public class NASA extends javax.swing.JFrame {
     private javax.swing.JPopupMenu pp_planetas;
     private javax.swing.JTextField tf_anillos;
     private javax.swing.JTextField tf_anillos1;
+    private javax.swing.JTextField tf_destino;
     private javax.swing.JTextField tf_distancia;
     private javax.swing.JTextField tf_distancia1;
     private javax.swing.JTextField tf_experiencia;
@@ -1221,6 +1340,7 @@ public class NASA extends javax.swing.JFrame {
     private javax.swing.JTextField tf_nombre1;
     private javax.swing.JTextField tf_nombre2;
     private javax.swing.JTextField tf_nombre3;
+    private javax.swing.JTextField tf_numserie;
     private javax.swing.JTextField tf_peso;
     private javax.swing.JTextField tf_peso1;
     private javax.swing.JTextField tf_sexo;
@@ -1231,6 +1351,7 @@ public class NASA extends javax.swing.JFrame {
     private javax.swing.JTextField tf_superficie1;
     private javax.swing.JTextField tf_temp;
     private javax.swing.JTextField tf_temp1;
+    private javax.swing.JTextField tf_velocidad;
     // End of variables declaration//GEN-END:variables
 ArrayList<Planetas> lista = new ArrayList();
     ArrayList<Astronautas> lista2 = new ArrayList();
