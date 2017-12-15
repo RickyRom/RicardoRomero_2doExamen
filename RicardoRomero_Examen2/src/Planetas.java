@@ -11,14 +11,14 @@
 public class Planetas {
     private String nombre;
     private String temperatura;
-    private Boolean anillos;
+    private String anillos;
     private String tipo_suerficie;
     private double distancia_tierra;
 
     public Planetas() {
     }
 
-    public Planetas(String nombre, String temperatura, Boolean anillos, String tipo_suerficie, double distancia_tierra) {
+    public Planetas(String nombre, String temperatura, String anillos, String tipo_suerficie, double distancia_tierra) {
         this.nombre = nombre;
         this.temperatura = temperatura;
         this.anillos = anillos;
@@ -42,11 +42,11 @@ public class Planetas {
         this.temperatura = temperatura;
     }
 
-    public Boolean getAnillos() {
+    public String getAnillos() {
         return anillos;
     }
 
-    public void setAnillos(Boolean anillos) {
+    public void setAnillos(String anillos) {
         this.anillos = anillos;
     }
 
@@ -68,7 +68,7 @@ public class Planetas {
 
     @Override
     public String toString() {
-        return "Planetas{" + "nombre=" + nombre + ", temperatura=" + temperatura + ", anillos=" + anillos + ", tipo_suerficie=" + tipo_suerficie + ", distancia_tierra=" + distancia_tierra + '}';
+        return nombre;
     }
     
 }
