@@ -51,5 +51,5 @@ public abstract class Naves_Espaciales {
         return "Naves_Espaciales{" + "numero_serie=" + numero_serie + ", destino=" + destino + ", velocidad=" + velocidad + '}';
     }
     
-    public abstract void calcularTiempo(int ida, int regreso);
+    public abstract long[] calcularTiempo(long ida, long regreso);
 }

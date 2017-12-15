@@ -21,6 +21,16 @@ public class NASA extends javax.swing.JFrame {
     public NASA() {
         initComponents();
         this.setExtendedState(MAXIMIZED_BOTH);
+        if(ap.getArchivo().exists()) {
+            ap.cargarArchivo();
+            lista = ap.getListaPlanetas();
+        }
+        
+        if(aa.getArchivo().exists()) {
+            aa.cargarArchivo();
+            lista2 = aa.getListaAstronautas();
+        }
+        
     }
 
     /**
@@ -136,6 +146,7 @@ public class NASA extends javax.swing.JFrame {
         agregar_planetas = new javax.swing.JMenuItem();
         agregar_astronautas = new javax.swing.JMenuItem();
         agregar_naves_espaciales = new javax.swing.JMenuItem();
+        salir = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         jPanel3.setBackground(new java.awt.Color(51, 51, 51));
@@ -940,6 +951,14 @@ public class NASA extends javax.swing.JFrame {
         });
         jMenu1.add(agregar_naves_espaciales);
 
+        salir.setText("Salir");
+        salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salirActionPerformed(evt);
+            }
+        });
+        jMenu1.add(salir);
+
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Info");
@@ -1038,6 +1057,7 @@ public class NASA extends javax.swing.JFrame {
 
             Astronautas a = new Astronautas(nombre, nacionalidad, sueldo, experiencia, sexo, peso);
             lista2.add(a);
+            
 
             DefaultComboBoxModel modelo = (DefaultComboBoxModel) cb_astronautas.getModel();
             DefaultComboBoxModel modelo2 = (DefaultComboBoxModel) cb_modificar_astronautas.getModel();
@@ -1211,6 +1231,17 @@ public class NASA extends javax.swing.JFrame {
         
     }//GEN-LAST:event_agregar_naves_espacialesActionPerformed
 
+    private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
+        ap.setListaPlanetas(lista);
+        aa.setListaAstronautas(lista2);
+        try {
+            ap.escribirArchivo();
+            aa.escribirArchivo();
+        } catch (Exception e) {
+        }
+        System.exit(0);
+    }//GEN-LAST:event_salirActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1327,6 +1358,7 @@ public class NASA extends javax.swing.JFrame {
     private javax.swing.JButton modifica_planetas;
     private javax.swing.JPopupMenu pp_astronautas;
     private javax.swing.JPopupMenu pp_planetas;
+    private javax.swing.JMenuItem salir;
     private javax.swing.JTextField tf_anillos;
     private javax.swing.JTextField tf_anillos1;
     private javax.swing.JTextField tf_destino;
@@ -1355,5 +1387,6 @@ public class NASA extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 ArrayList<Planetas> lista = new ArrayList();
     ArrayList<Astronautas> lista2 = new ArrayList();
-
+AdminPlanetas ap = new AdminPlanetas("Planetas.r");
+AdminAstronautas aa = new AdminAstronautas("Astronautas.r");
 }

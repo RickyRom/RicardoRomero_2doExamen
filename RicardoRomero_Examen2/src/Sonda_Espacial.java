@@ -43,7 +43,8 @@ public class Sonda_Espacial extends Naves_Espaciales{
     }
 
     @Override
-    public void calcularTiempo(int ida, int regreso) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public long[] calcularTiempo(long ida, long regreso) {
+        long[] arre = new long[2];
+        
     }
 }

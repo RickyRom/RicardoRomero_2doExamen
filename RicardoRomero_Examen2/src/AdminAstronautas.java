@@ -26,12 +26,12 @@ public class AdminAstronautas {
         archivo = new File(path);
     }
 
-    public ArrayList<Astronautas> getListaPlanetas() {
+    public ArrayList<Astronautas> getListaAstronautas() {
         return listaAstronautas;
     }
 
-    public void setListaPlanetas(ArrayList<Astronautas> listaPlanetas) {
-        this.listaAstronautas = listaPlanetas;
+    public void setListaAstronautas(ArrayList<Astronautas> listaAstronautas) {
+        this.listaAstronautas = listaAstronautas;
     }
 
     public File getArchivo() {

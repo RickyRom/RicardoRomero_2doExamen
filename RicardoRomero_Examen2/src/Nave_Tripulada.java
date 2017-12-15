@@ -45,7 +45,7 @@ public class Nave_Tripulada extends Naves_Espaciales{
     }
 
     @Override
-    public void calcularTiempo(int ida, int regreso) {
+    public long[] calcularTiempo(long ida, long regreso) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
