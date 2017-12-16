@@ -6,19 +6,19 @@ import java.util.ArrayList;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author ricky
  */
-public class Nave_Tripulada extends Naves_Espaciales{
+public class Nave_Tripulada extends Naves_Espaciales {
+
     private String lugar_despeje;
     private ArrayList<Astronautas> listaA = new ArrayList();
 
     public Nave_Tripulada() {
     }
 
-    public Nave_Tripulada(String lugar_despeje, int numero_serie, String destino, double velocidad) {
+    public Nave_Tripulada(String lugar_despeje, int numero_serie, Planetas destino, double velocidad) {
         super(numero_serie, destino, velocidad);
         this.lugar_despeje = lugar_despeje;
     }
@@ -45,7 +45,11 @@ public class Nave_Tripulada extends Naves_Espaciales{
     }
 
     @Override
-    public long[] calcularTiempo(long ida, long regreso) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public double[] calcularTiempo() {
+        double[] arre = new double[2];
+        arre[0] = this.destino.getDistancia_tierra() / (super.getVelocidad() *(Math.pow(listaA.get(0).getPeso(), 2)) / 100);
+        arre[1] = this.destino.getDistancia_tierra() / super.getVelocidad() / 100;
+        return arre;
     }
+
 }

@@ -15,7 +15,7 @@ public class Sonda_Espacial extends Naves_Espaciales{
     public Sonda_Espacial() {
     }
 
-    public Sonda_Espacial(String material, double peso, int numero_serie, String destino, double velocidad) {
+    public Sonda_Espacial(String material, double peso, int numero_serie, Planetas destino, double velocidad) {
         super(numero_serie, destino, velocidad);
         this.material = material;
         this.peso = peso;
@@ -43,8 +43,10 @@ public class Sonda_Espacial extends Naves_Espaciales{
     }
 
     @Override
-    public long[] calcularTiempo(long ida, long regreso) {
-        long[] arre = new long[2];
-        
+    public double[] calcularTiempo() {
+        double[] arre = new double[2];
+        arre[0] = this.destino.getDistancia_tierra() / super.getVelocidad();
+        arre[1] = 9.8 * arre[0];
+        return arre;
     }
 }

@@ -10,13 +10,13 @@
  */
 public abstract class Naves_Espaciales {
     private int numero_serie;
-    private String destino;
+    Planetas destino;
     private double velocidad;
 
     public Naves_Espaciales() {
     }
 
-    public Naves_Espaciales(int numero_serie, String destino, double velocidad) {
+    public Naves_Espaciales(int numero_serie, Planetas destino, double velocidad) {
         this.numero_serie = numero_serie;
         this.destino = destino;
         this.velocidad = velocidad;
@@ -30,11 +30,11 @@ public abstract class Naves_Espaciales {
         this.numero_serie = numero_serie;
     }
 
-    public String getDestino() {
+    public Planetas getDestino() {
         return destino;
     }
 
-    public void setDestino(String destino) {
+    public void setDestino(Planetas destino) {
         this.destino = destino;
     }
 
@@ -51,5 +51,5 @@ public abstract class Naves_Espaciales {
         return "Naves_Espaciales{" + "numero_serie=" + numero_serie + ", destino=" + destino + ", velocidad=" + velocidad + '}';
     }
     
-    public abstract long[] calcularTiempo(long ida, long regreso);
+    public abstract double[] calcularTiempo();
 }

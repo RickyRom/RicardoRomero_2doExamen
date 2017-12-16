@@ -13,7 +13,7 @@ public class Planetas {
     private String temperatura;
     private String anillos;
     private String tipo_suerficie;
-    private double distancia_tierra;
+    double distancia_tierra;
 
     public Planetas() {
     }
