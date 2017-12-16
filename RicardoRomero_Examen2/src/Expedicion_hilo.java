@@ -17,6 +17,25 @@ public class Expedicion_hilo extends Thread{
     Naves_Espaciales nave;
     Planetas destino;
     JLabel exp;
+    public Expedicion_hilo(JLabel aviso) {
+        this.exp = aviso;
+    }
+
+    public Naves_Espaciales getNave() {
+        return nave;
+    }
+
+    public void setNave(Naves_Espaciales nave) {
+        this.nave = nave;
+    }
+
+    public Planetas getDestino() {
+        return destino;
+    }
+
+    public void setDestino(Planetas destino) {
+        this.destino = destino;
+    }
 
     @Override
     public void run() {
